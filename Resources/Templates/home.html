@@ -29,10 +29,19 @@
    <input type="number" name="id" placeholder="#"/>
     <button type="submit">Delete</button>
 </form>
+
+
+
+
 <br>
+
+Click on entries to edit:
 <ol>
     {{#restaurants}}
-    <li><b>{{name}}</b> - {{location}} - {{rating}} / 5 - {{comment}}</li>
+
+    <a href="/edit?id={{id}}"> <li> ID:{{id}} - <b>{{name}}</b> - {{location}} - {{rating}} / 5 - {{comment}}</li></a>
+    <input type="hidden" name="editid" value="{{id}}"/>
+
     {{/restaurants}}
 </ol>
 </body>
